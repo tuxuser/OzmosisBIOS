@@ -1,0 +1,60 @@
+CHANGELOG:
+-------------------------------- 
+
+894M
+-----
+Refactored nVidia device injector, added HDMI/DP audio support.
+Set BIOS Features/Display Boot Option ROM Control to Legacy only by default.
+Set BIOS Features/Boot Mode Selection to UEFI only by default.
+Restored "Windows Boot Manager" detection to fix Startup Disk preference pane selection.
+Ensure 'MLB' variable >= 17 digits, pad BaseBoardSerial with digits generated from UUID when needed.
+
+Please note:
+Check your 7xx GFX for full compatibility per your OS
+
+
+7xx installation with IGPU (Integrated Graphics) Enabled:
+
+WINDOWS
+Install Windows with 7xx GFX card first
+Install nVidia drivers 
+Shutdwon, Remove Card
+Reboot to Windows with monitor connected to one of IGPU ports.
+Install IGPU drivers
+Reboot to BIOS
+BIOS Features > Display Boot Option ROM Control to UEFI only
+Peripherals > Init Display First to AUTO
+Peripherals > Integrated Graphics to Enabled 
+Save and Exit
+Shutdown and now install 7xx GFX
+
+OS X/LINUX:
+Remove 7xx GFX
+Reboot to BIOS
+BIOS Features > Display Boot Option ROM Control to UEFI only
+Peripherals > Init Display First to IGPU
+Peripherals > Integrated Graphics to Enabled 
+Save and Exit
+Shutdown and now install 7xx GFX
+
+
+828M
+-----
+Changed IGPU Fixed Memory Size from 64M to 32M to match the framebuffer.
+Changed TB PCIe Cache-Line Size from 32 to 64
+Use subsystemid when custom framebuffer for ATI cards is chosen.
+Disable nVidia device injection only on GTX 6/7 cards.
+Fix nVidia VBIOS version read on desktop ROMs
+Fix for nVidia cards when they are not posted
+Fix loading injector.kext from Fv.
+
+820M Fix for Maverick installer. Update ATI Card List. 
+816M Fix loading SSDT table overrides.
+801M 10.8.5 audio distortion fixed.
+
+Click on the link above, download OZ and unzip to any Fat32 USB flash drive.
+Restart with USB flash drive and tap 'End' Key on reboot.
+Flash new BIOS
+After system verifies flashing, computer will reboot twice.
+
+Enjoy.

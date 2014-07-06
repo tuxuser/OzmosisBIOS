@@ -1,0 +1,23 @@
+INSTRUCTIONS
+
+OZ Boot Manager GUI
+
+Tap HOME key
+Use mouse to select OS to boot into. You may also use F12 to access BIOS Boot Manager and select your favorite OS. Simply tap F12 on boot up. 
+
+Verbose: When in Boot Selection WIN (Command key on Apple Keyboard) + V and then make your choice. 
+
+
+Install from DVD
+
+Insert 10.6.3 DVD
+Restart Computer
+Tap F12
+Select Mac OSX Install DVD 
+
+
+Graphics Cards
+
+Install your compatible [OS specific] GFX
+After flashing Init Display and Integrated Graphics will be set to AUTO To use Graphics Card set Init Display : IGPU, Integrated Graphics : Enabled 
+Restart Computer
