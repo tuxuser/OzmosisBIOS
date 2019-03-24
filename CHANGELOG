@@ -1,6 +1,37 @@
 CHANGELOG:
 -------------------------------- 
 
+167X
+-----
+
+Z77MXQUOAOS.H2O.OZ167X-MASS - BASED ON Z77MXQUOAOS.F2N BIOS
+
+MD5:   890c8f73aeba7b3a701fb7dccdea5360
+SHA-1: 852ba0d0149d46dc83665f23a7b738c65fef89da
+
+CHANGES:
+
+BIOS:
+  SET       Peripherals/IGPU Fixed Memory Size to 32M by default.
+  Set       BIOS Features/Display Boot Option ROM Control to Legacy Only by default.
+  REPLACED  SmcEmulatorKext/LpcSensors/CpuSensors/GpuSensors with version 6.16.1377.
+  ADDED     Extfs and Btrfs filesystems support.
+
+
+OZMOSIS:
+  FIXED Bootmanager hang in certain circumstances.
+  FIXED RAM reported size when memory is incorrectly installed.
+  FIXED Multiple Shell entries in boot manager
+  ADDED Workaround for cases when memory SPD data is incorrect(see examples for how to enable).
+
+OZMOSIS BETA Features/Test:
+  Skylake CPU support
+  FileVault 2
+  Linux/Android EFI Boot Stub
+  nVidia Full Driver Injection(see examples for how to disable)
+  Minimal keyboard support
+  Touchscreen support
+
 894M
 -----
 Refactored nVidia device injector, added HDMI/DP audio support.
